@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CheckView">
+        <!--是否启用背景色-->
+        <attr name="cv_enable_bg" format="boolean" />
+        <!--未选中背景色-->
+        <attr name="cv_bg_normal_color" format="color|reference" />
+        <!--选中背景色-->
+        <attr name="cv_bg_checked_color" format="color|reference" />
+
+        <!--是否启用边框-->
+        <attr name="cv_enable_border" format="boolean" />
+
+        <!--未选中边框颜色-->
+        <attr name="cv_border_normal_color" format="color|reference" />
+        <!--选中边框颜色-->
+        <attr name="cv_border_checked_color" format="color|reference" />
+
+        <!--选中勾的颜色-->
+        <attr name="cv_tick_color" format="color|reference" />
+        <!--描边的宽度、打勾的宽度-->
+        <attr name="cv_stroke_width" format="dimension" />
+        <!--动画时长-->
+        <attr name="cv_duration" format="integer" />
+        <!--矩形圆角度数-->
+        <attr name="cv_corner" format="dimension" />
+
+        <!--CheckView形状-->
+        <attr name="cv_mode" format="enum">
+            <!--圆形-->
+            <enum name="circle" value="0" />
+            <!--正方形-->
+            <enum name="square" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

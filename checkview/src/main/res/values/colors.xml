@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="check_view_bg_normal_color">#AAAAAA</color>
+    <color name="check_view_bg_checked_color">#EB4242</color>
+
+    <color name="check_view_border_normal_color">#AAAAAA</color>
+    <color name="check_view_border_checked_color">#2ABD5F</color>
+
+    <color name="check_view_tick_color">#2ABD5F</color>
+</resources>

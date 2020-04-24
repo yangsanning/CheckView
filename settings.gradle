@@ -1,2 +1,3 @@
 rootProject.name='CheckView'
 include ':app'
+include ':checkview'
