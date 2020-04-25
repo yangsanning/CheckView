@@ -66,6 +66,8 @@ public class CheckView extends View implements Checkable {
     private boolean isChecked;
     private boolean canTickDraw;
 
+    private OnCheckedChangeListener onCheckedChangeListener;
+
     public CheckView(Context context) {
         this(context, null);
     }
@@ -323,6 +325,9 @@ public class CheckView extends View implements Checkable {
         radiusScale = 1.0f;
         drawDistance = isChecked() ? (leftTwoPointDistance + rightTwoPointDistance) : 0;
         invalidate();
+        if (onCheckedChangeListener != null) {
+            onCheckedChangeListener.onCheckedChanged(this, isChecked);
+        }
     }
 
     /**
@@ -338,8 +343,20 @@ public class CheckView extends View implements Checkable {
             } else {
                 startNormalAnimation();
             }
+            if (onCheckedChangeListener != null) {
+                onCheckedChangeListener.onCheckedChanged(this, isChecked);
+            }
         } else {
             this.setChecked(checked);
         }
+    }
+
+    public void setOnCheckedChangeListener(OnCheckedChangeListener onCheckedChangeListener) {
+        this.onCheckedChangeListener = onCheckedChangeListener;
+    }
+
+    public interface OnCheckedChangeListener {
+
+        void onCheckedChanged(CheckView checkView, boolean isChecked);
     }
 }
